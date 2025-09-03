@@ -1,0 +1,101 @@
+/* Universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Type or tag */
+
+p {
+    margin-block: 1.5rem;
+}
+
+/* class name */
+
+.class {
+    text-decoration: underline;
+}
+
+/* ID */
+#id {
+    font-family: monospace;
+}
+
+/* relational */
+li:has(a) {
+    display: flex;
+}
+
+/* Descendant */
+header h1 {
+    /* Selects all Heading 1*/
+}
+
+/* Child */
+header>h1 {
+    /* Selects all Heading 1 that are direct children of header */
+}
+
+/* General sibling */
+h1~p {
+    /* Selects a paragraph that is a sibling of Heading 1 */
+}
+
+/* Adjacent sibling */
+h1+p {
+    /* Selects a paragraph that is immediately after Heading 1 */
+}
+
+/* chained */
+h1,
+p {
+    /* Selects both elements */
+}
+
+.container {
+    display: flex;
+    /* o inline flex */
+    flex-direction: "column";
+    /* o row dependiendo del caso */
+    flex-wrap: wrap;
+    /* o nowrap dependiendo del caso */
+    display: flex;
+    gap: 10px;
+    /* espacio entre los elementos */
+    gap: 10px 20px;
+    /* row gap y column gap */
+    row-gap: 10px;
+    /* espacio entre filas */
+    column-gap: 20px;
+    /* espacio entre columnas */
+}
+
+
+.item {
+    flex-grow: 1;
+    /* espaciado entre los elementos interiores */
+}
+
+.item-2 {
+    flex-grow: 2;
+    /* espaciado especial de elemento item-2 */
+}
+
+.container {
+    display: grid;
+    /* o inline grid */
+    grid-template-columns:
+        1fr 1fr minmax(10px, 1fr) 3fr repeat(5fr, 1fr) 50px auto 100px 1fr;
+    /* e.g.
+      grid-template-rows
+        min-content 1fr min-content
+        100px 1fr max-content*/
+}
+
+/* Decidi agregar estilos a los items para visualizar mejor el grid */
+.item {
+    background-color: rgb(178, 164, 146);
+    padding: 20px;
+    border: 1px solid black;
+    min-height: 100px;
+}
+

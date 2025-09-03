@@ -1,0 +1,80 @@
+/* Universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Type or tag */
+
+p {
+    margin-block: 1.5rem;
+}
+
+/* class name */
+
+.class {
+    text-decoration: underline;
+}
+
+/* ID */
+#id {
+    font-family: monospace;
+}
+
+/* relational */
+li:has(a) {
+    display: flex;
+}
+
+/* Descendant */
+header h1 {
+    /* Selects all Heading 1*/
+}
+
+/* Child */
+header>h1 {
+    /* Selects all Heading 1 that are direct children of header */
+}
+
+/* General sibling */
+h1~p {
+    /* Selects a paragraph that is a sibling of Heading 1 */
+}
+
+/* Adjacent sibling */
+h1+p {
+    /* Selects a paragraph that is immediately after Heading 1 */
+}
+
+/* chained */
+h1,
+p {
+    /* Selects both elements */
+}
+
+.container {
+    display: flex;
+    /* o inline flex */
+    flex-direction: "column";
+    /* o row dependiendo del caso */
+    flex-wrap: wrap;
+    /* o nowrap dependiendo del caso */
+    display: flex;
+    gap: 10px;
+    /* espacio entre los elementos */
+    gap: 10px 20px;
+    /* row gap y column gap */
+    row-gap: 10px;
+    /* espacio entre filas */
+    column-gap: 20px;
+    /* espacio entre columnas */
+}
+
+.item {
+    flex-grow: 1;
+    /* espaciado entre los elementos interiores */
+}
+
+.item-2 {
+    flex-grow: 2;
+    /* espaciado especial de elemento item-2 */
+}

@@ -1,0 +1,85 @@
+/* Universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Type or tag */
+
+p {
+    margin-block: 1.5rem;
+}
+
+/* class name */
+
+.class {
+    text-decoration: underline;
+}
+
+/* ID */
+#id {
+    font-family: monospace;
+}
+
+/* relational */
+li:has(a) {
+    display: flex;
+}
+
+/* Descendant */
+header h1 {
+    /* Selects all Heading 1*/
+}
+
+/* Child */
+header>h1 {
+    /* Selects all Heading 1 that are direct children of header */
+}
+
+/* General sibling */
+h1~p {
+    /* Selects a paragraph that is a sibling of Heading 1 */
+}
+
+/* Adjacent sibling */
+h1+p {
+    /* Selects a paragraph that is immediately after Heading 1 */
+}
+
+/* chained */
+h1,
+p {
+    /* Selects both elements */
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: [col1-start] 1.5fr [col2-start] 1fr [col3-start] 1.5fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+    padding: 30px;
+}
+
+
+.item {
+    background-color: rgb(244, 241, 240);
+    padding: 20px;
+    border: 1px solid rgb(222, 209, 209);
+    min-height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Esquinas redondeadas, mas parecidads a las de la guia*/
+}
+
+.item img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    /* La imagen no superará el ancho del contenedor */
+    max-height: 200px;
+    /* altura maxima para las imagenes */
+}
